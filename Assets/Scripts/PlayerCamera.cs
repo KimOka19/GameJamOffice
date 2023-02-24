@@ -4,7 +4,7 @@ using UnityEngine;
 /// A simple FPP (First Person Perspective) camera rotation script.
 /// Like those found in most FPS (First Person Shooter) games.
 /// </summary>
-public class FirstPersonCameraRotation : MonoBehaviour {
+public class PlayerCamera : MonoBehaviour {
 
 	public float Sensitivity {
 		get { return sensitivity; }
