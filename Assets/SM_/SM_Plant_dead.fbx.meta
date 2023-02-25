@@ -3,7 +3,22 @@ guid: 2ccdfda23e6513147acbaa1048a044ce
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: m_dirt2
+    second: {fileID: 2100000, guid: b3132e78364897441ae3215367240906, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: m_plantdead1
+    second: {fileID: 2100000, guid: ff9ee00e9e1e8aa47a2b2a2025135837, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: m_pot2
+    second: {fileID: 2100000, guid: 84322243eaf640247bdb94bde4b65390, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
