@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class Interactables : MonoBehaviour
 {
-    [SerializeField] private Material normalMaterial = null;
-    [SerializeField] private Material hightLightMaterial = null;
+    [SerializeField] 
+    private Material normalMaterial = null;
+
+    [SerializeField] 
+    private Material hightLightMaterial = null;
 
     private Renderer renderer = null;
     // Start is called before the first frame update
