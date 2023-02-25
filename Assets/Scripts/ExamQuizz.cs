@@ -1,15 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
-public class ExamQuizz : MonoBehaviour
+public class ExamQuizz : MainTask
 {
-    private int noteQuizz = 0;
+    [SerializeField] private TextMeshProUGUI textBoxDialog = null;
+
+    [SerializeField] private GameObject panelDialog = null;
+
     [SerializeField] private int questionMax = 5;
-    // Start is called before the first frame update
+    [SerializeField] private Dialog dialog;
+    [SerializeField] private float typingSpeed = 0.1f;
+    [SerializeField] private GameObject[] panelChoices = null;
+
+
+
+    private int questionCurrent = 0;
+    private string currentSentence;
+    private int indexSentence;
+    private int indexChoices;
+    
+
+    private void Awake()
+    {
+        indexSentence = 0;
+        textBoxDialog.text = "";
+    }
+
     void Start()
     {
-        
+        panelDialog.SetActive(true);
+        ShowSentence();
     }
 
     // Update is called once per frame
@@ -18,25 +40,49 @@ public class ExamQuizz : MonoBehaviour
         
     }
 
+    public void ToNextSentence()
+    {
+        UnShowChoices();
+        ShowSentence();
+        indexChoices++;
+    }
+
+    private void ShowChoices()
+    {
+        panelChoices[indexChoices].SetActive(true);
+    }
+
+    public void UnShowChoices()
+    {
+        panelChoices[indexChoices].SetActive(false);
+    }
+
+    private void ShowSentence()
+    {
+        currentSentence = GetSentenceCurrent();
+        ShowDialog(currentSentence, typingSpeed, textBoxDialog);
+        indexSentence++;
+    }
+
     public void GoodResponse()
     {
-        noteQuizz++;
-        Debug.Log("Quizz: " + noteQuizz);
+        questionCurrent++;
+        Debug.Log("Quizz: " + questionCurrent);
     }
 
     public void WrongResponse()
     {
-        noteQuizz--;
-        Debug.Log("Quizz: " + noteQuizz);
+        questionCurrent++;
+        Debug.Log("Quizz: " + questionCurrent);
     }
 
     public void WinExam()
     {
-        if (noteQuizz == questionMax)
+        if (questionCurrent == questionMax)
         {
             // Add max score
         } 
-        else if (noteQuizz < questionMax / 2)
+        else if (questionCurrent < questionMax / 2)
         {
             // Add mid score
         }
@@ -45,7 +91,30 @@ public class ExamQuizz : MonoBehaviour
             // Sub score (penality)
         }
 
+    }
+    public string GetSentenceCurrent()
+    {
+        return dialog.GetSentence(indexSentence);
+    }
 
+    public void ShowDialog(string sentence, float typingSpeed, TextMeshProUGUI textBox)
+    {
+        //LevelReference.Instance.UIManager.EnableDialogUI();
+        currentSentence = sentence;
+        this.typingSpeed = typingSpeed;
+        StartCoroutine(Type(textBox));
+    }
+
+    IEnumerator Type(TextMeshProUGUI textBox)
+    {
+        textBox.text = "";
+        foreach (char letter in currentSentence.ToCharArray())
+        {
+            textBox.text += letter;
+            yield return new WaitForSeconds(typingSpeed);
+        }
+
+        ShowChoices();
 
     }
 }

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scripts/AssetToClean.cs.meta
+guid: 0d300657fa4c0894597b4d7ddc2e9f88
+========
+guid: 686b57f97c4fc03499e31e2c2b71b6bd
+>>>>>>>> d24a4de1ebbdf9546e5b0876464e1c15ccce8c95:Assets/Scripts/Dialog.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
