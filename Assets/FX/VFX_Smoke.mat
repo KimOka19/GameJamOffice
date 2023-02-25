@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_Plastic_Dark
-  m_Shader: {fileID: -6465566751694194690, guid: 586dece796cea6343be768b76b60f669, type: 3}
+  m_Name: VFX_Smoke
+  m_Shader: {fileID: -6465566751694194690, guid: 55c70ea52424527498c34992b2b9d865, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -19,10 +19,6 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - Texture2D_1cbbf15165f64819a053470535e32235:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -35,10 +31,6 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - Vector1_a4036fbd8daa4ee498b86141de5beb44: 0
-    - Vector1_cd25700425314e86812a5c309e7f7621: 0.1
-    - Vector1_fa16a75c04c24f90a04af7802a83b384: 100
-    m_Colors:
-    - Color_2df7810160194a0a90b27126a0ee669e: {r: 0.5742382, g: 0.6132076, b: 0.36734605, a: 0}
+    m_Floats: []
+    m_Colors: []
   m_BuildTextureStacks: []
