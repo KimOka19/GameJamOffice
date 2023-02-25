@@ -11,7 +11,7 @@ public class TaskSmashButton : MainTask
     private int maxJauge = 100;
     private float valueCurrent = 10;
 
-    private float durationTask = 60f;
+    private float durationTask = 10f;
     private Timer timer = null;
 
     private float MaxTime = 20f;
@@ -22,6 +22,9 @@ public class TaskSmashButton : MainTask
     void Start()
     {
         player.enabled = true;
+        jauge.enabled = true;
+        jauge.gameObject.SetActive(true);
+
         timer = LevelReferences.Instance.timer;
         timer.Set(durationTask);
         timer.Start();
@@ -43,6 +46,16 @@ public class TaskSmashButton : MainTask
             UpdateUI();
         }
 
+        if (timer.Update())
+        {
+           Finish();
+        }
+
+
+        if(jauge.value == maxJauge)
+        {
+            Finish();
+        }
 
     }
 
@@ -54,11 +67,6 @@ public class TaskSmashButton : MainTask
         {
             ActiveTime += Time.deltaTime;
             valueCurrent = (ActiveTime / MaxTime) * 200;
-        }
-        else
-        {
-           // StartCoroutine(DelayPause());
-            //inPaused = false;
         }
         
         //valueCurrent += 10;
@@ -85,5 +93,13 @@ public class TaskSmashButton : MainTask
         yield return new WaitForSeconds(5f);
     }
 
+    private void Finish()
+    {
+        Debug.Log("Finish prout");
+
+        player.enabled = false;
+        jauge.gameObject.SetActive(false);
+        LevelReferences.Instance.taskManager.FinishTaskCurrent();
+    }
 
 }

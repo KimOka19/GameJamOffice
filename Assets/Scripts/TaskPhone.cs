@@ -22,8 +22,13 @@ public class TaskPhone : MainTask
         if(phone == playerInteraction.GetCurrentItemSelected())
         {
             shakeScreen.SetEnableShake(false);
+            Finish();
         }
     }
 
+    private void Finish()
+    {
+        LevelReferences.Instance.taskManager.FinishTaskCurrent();
 
+    }
 }
