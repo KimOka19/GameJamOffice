@@ -20,9 +20,13 @@ public class Dialog
 
     public string GetSentence(int nbSentence)
     {
-        if (sentences[nbSentence] != null)
+        if (nbSentence < sentences.Length)
         {
-            return sentences[nbSentence];
+            if (sentences[nbSentence] != null)
+            {
+                return sentences[nbSentence];
+            }
+
         }
 
         Debug.Log("No more sentence.");
