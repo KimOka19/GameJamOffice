@@ -10,11 +10,12 @@ public class Interactables : MonoBehaviour
     [SerializeField] 
     private Material hightLightMaterial = null;
 
+    [SerializeField]
     private Renderer renderer = null;
     // Start is called before the first frame update
     void Start()
     {
-        renderer = GetComponent<Renderer>();
+        //renderer = GetComponent<Renderer>();
     }
 
     // Update is called once per frame
@@ -30,12 +31,26 @@ public class Interactables : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        renderer.material = hightLightMaterial;
+       Material[] materials = renderer.materials;
+        for (int i = 0; i < materials.Length; i++)
+        {
+            if(hightLightMaterial == materials[i])
+            {
+                materials[i].SetFloat("Vector1_2a9a352a5bd44069a7ab93084267fcec", 10);
+            }
+        }
     }
 
     private void OnMouseExit()
     {
-        renderer.material = normalMaterial;
+        Material[] materials = renderer.materials;
+        for (int i = 0; i < materials.Length; i++)
+        {
+            if (hightLightMaterial == materials[i])
+            {
+                materials[i].SetFloat("Vector1_2a9a352a5bd44069a7ab93084267fcec", 10);
+            }
+        }
     }
 
 }
