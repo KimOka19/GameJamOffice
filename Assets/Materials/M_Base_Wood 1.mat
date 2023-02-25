@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_Base_Wood
+  m_Name: M_Base_Wood 1
   m_Shader: {fileID: -6465566751694194690, guid: 586dece796cea6343be768b76b60f669, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -37,6 +37,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Vector1_a4036fbd8daa4ee498b86141de5beb44: 0
+    - Vector1_cd25700425314e86812a5c309e7f7621: 0
     - Vector1_fa16a75c04c24f90a04af7802a83b384: 1000
     m_Colors:
     - Color_2df7810160194a0a90b27126a0ee669e: {r: 0.6415094, g: 0.49323595, b: 0.49323595, a: 0}
