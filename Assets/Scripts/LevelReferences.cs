@@ -13,8 +13,14 @@ public class LevelReferences : Singleton<LevelReferences>
 	[SerializeField]
 	private TaskManager _taskManager = null;
 
+	[SerializeField]
+	private PlayerInteraction _playerInteraction = null;
+
+
 	public Timer timer => _timer;
 	public PlayerScoring playerScoring => _playerScoring;
 
 	public TaskManager taskManager => _taskManager;
+
+	public PlayerInteraction playerInteraction => _playerInteraction;
 }

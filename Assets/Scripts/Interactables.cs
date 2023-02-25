@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class Interactables : MonoBehaviour
 {
+    [SerializeField] private Material normalMaterial = null;
+    [SerializeField] private Material hightLightMaterial = null;
+
+    private Renderer renderer = null;
     // Start is called before the first frame update
     void Start()
     {
-        
+        renderer = GetComponent<Renderer>();
     }
 
     // Update is called once per frame
@@ -20,4 +24,15 @@ public class Interactables : MonoBehaviour
     {
         
     }
+
+    private void OnMouseEnter()
+    {
+        renderer.material = hightLightMaterial;
+    }
+
+    private void OnMouseExit()
+    {
+        renderer.material = normalMaterial;
+    }
+
 }
