@@ -21,11 +21,13 @@ public class ExamQuizz : MonoBehaviour
     public void GoodResponse()
     {
         noteQuizz++;
+        Debug.Log("Quizz: " + noteQuizz);
     }
 
     public void WrongResponse()
     {
         noteQuizz--;
+        Debug.Log("Quizz: " + noteQuizz);
     }
 
     public void WinExam()
