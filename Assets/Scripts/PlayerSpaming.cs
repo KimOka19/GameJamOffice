@@ -6,6 +6,9 @@ public class PlayerSpaming : MonoBehaviour
 {
     private float clickCount;
     private float timer;
+    private bool isSpamming = false;
+
+    private float limitValidCps = 2;
 
     // Update is called once per frame
     void Update()
@@ -23,9 +26,31 @@ public class PlayerSpaming : MonoBehaviour
         if (timer >= 1f)
         {
             float cps = clickCount / timer;
+            valideSpam(cps);
+
             Debug.Log("Clics par seconde : " + cps.ToString());
             clickCount = 0f;
             timer = 0f;
+        }
+
+
+    }
+
+    public bool GetisSpamming()
+    {
+        return isSpamming;
+    }
+
+
+    private void valideSpam(float cps)
+    {
+        if(cps >= limitValidCps)
+        {
+            isSpamming = true;
+        }
+        else
+        {
+            isSpamming = false;
         }
     }
 }

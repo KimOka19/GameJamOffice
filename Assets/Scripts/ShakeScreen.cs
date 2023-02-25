@@ -5,15 +5,15 @@ using UnityEngine;
 public class ShakeScreen : MonoBehaviour
 {
     // Camera Information
-    public Transform cameraTransform;
+    [SerializeField] private Transform cameraTransform;
     private Vector3 orignalCameraPos;
 
     // Shake Parameters
-    public float shakeDuration = 2f;
+    //public float shakeDuration = 2f;
     public float shakeAmount = 0.7f;
 
-    private bool canShake = false;
-    private float _shakeTimer;
+    private bool canShake = true;
+    //private float _shakeTimer;
 
 
 
@@ -26,10 +26,8 @@ public class ShakeScreen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            ShakeCamera();
-        }
+        
+        //ShakeCamera();
 
         if (canShake)
         {
@@ -40,22 +38,27 @@ public class ShakeScreen : MonoBehaviour
     public void ShakeCamera()
     {
         canShake = true;
-        _shakeTimer = shakeDuration;
+        //_shakeTimer = shakeDuration;
     }
 
     public void StartCameraShakeEffect()
     {
-        if (_shakeTimer > 0)
+        if (canShake)
         {
             cameraTransform.localPosition = orignalCameraPos + Random.insideUnitSphere * shakeAmount;
-            _shakeTimer -= Time.deltaTime;
+            //_shakeTimer -= Time.deltaTime;
         }
         else
         {
-            _shakeTimer = 0f;
+            //_shakeTimer = 0f;
             cameraTransform.position = orignalCameraPos;
             canShake = false;
         }
     }
 
+    public void SetEnableShake(bool enable)
+    {
+        canShake = enable;
+        Debug.Log(canShake);
+    }
 }
