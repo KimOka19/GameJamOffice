@@ -10,25 +10,24 @@ public class PlayerInteraction : MonoBehaviour
 
     private LayerMask layerMask;
     private GameObject currentItem = null;
+    [SerializeField] private Camera cameraCurrent = null;
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         
     }
-
     // Update is called once per frame
     void Update()
     {
 
         if (Input.GetButtonDown("Fire1"))
         {
-            Ray ray = Camera.current.ScreenPointToRay(Input.mousePosition);
+            Ray ray = cameraCurrent.ScreenPointToRay(Input.mousePosition);
             if(Physics.Raycast(ray, out RaycastHit hitInfo))
             {
                 if (hitInfo.collider.gameObject.GetComponent<Interactables>() != null)
                 {
-                    Vector3 distanceToTarget = hitInfo.point - transform.position;
-
+                    //Vector3 distanceToTarget = hitInfo.point - transform.position;
                     currentItem = hitInfo.collider.gameObject;
                     Debug.Log(hitInfo.collider.gameObject.name);
                 }
