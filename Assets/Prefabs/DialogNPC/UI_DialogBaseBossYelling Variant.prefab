@@ -1,0 +1,132 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8662386874248425003
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7802113650576930546, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802113650576930546, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802113650576930546, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802113650576930546, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802113650576930546, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802113650576930546, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802113650576930546, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802113650576930546, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802113650576930546, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802113650576930546, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802113650576930546, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802113650576930546, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802113650576930546, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802113650576930546, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802113650576930546, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802113650576930546, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802113650576930546, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802113650576930546, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802113650576930546, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802113650576930546, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802113650576930546, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802113650576930547, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
+      propertyPath: dialog.sentences.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802113650576930547, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
+      propertyPath: dialog.sentences.Array.data[0]
+      value: "Steve c'est quoi ce mail que vous m'avez envoy\xE9 ce matin ? \r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802113650576930547, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
+      propertyPath: dialog.sentences.Array.data[1]
+      value: "Je peux savoir pourquoi votre t\xE9l\xE9phone sonne pendant mes appels
+        ?\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802113650576930547, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
+      propertyPath: dialog.sentences.Array.data[2]
+      value: "Steve vous n'allez pas devenir comme Guillaume quand m\xEAme occuper
+        vous de vos plantes bon sang !\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802113650576930547, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
+      propertyPath: dialog.sentences.Array.data[3]
+      value: 'Ranger moi ce bureau ***** !!!
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802113650576930547, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
+      propertyPath: dialog.sentences.Array.data[4]
+      value: "Pourquoi votre ordinateur est dans un \xE9tat pareil !? \r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802113650576930547, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
+      propertyPath: dialog.sentences.Array.data[5]
+      value: "Ce matin je vous ai demander le dossier du client n\xB0312 vous m'avez
+        donn\xE9 un dossier avec des photocopie de vos fesses dans mon bureau !!!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802113650576930558, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
+      propertyPath: m_Name
+      value: UI_DialogBaseBossYelling
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}

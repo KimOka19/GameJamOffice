@@ -1,0 +1,113 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &332337654149595870
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7802113650576930546, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802113650576930546, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802113650576930546, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802113650576930546, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802113650576930546, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802113650576930546, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802113650576930546, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802113650576930546, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802113650576930546, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802113650576930546, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802113650576930546, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802113650576930546, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802113650576930546, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802113650576930546, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802113650576930546, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802113650576930546, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802113650576930546, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802113650576930546, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802113650576930546, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802113650576930546, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802113650576930546, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802113650576930547, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
+      propertyPath: dialog.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802113650576930547, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
+      propertyPath: dialog.sentences.Array.data[0]
+      value: "Oh salut je t'ai pas parl\xE9 de mon Week End encore, je suis all\xE9
+        au lac avec mon mari et ma fille, le matin on s'ai baigner l'eau \xE9tait
+        un peu froide mais \xE7a allait, apres on est all\xE9 manger un glace oh
+        elles \xE9tait bonne, tres bonne. Ensuite c'\xE9tait l'heure de manger on
+        avait pr\xE9parer un pick nick avec des sandwich au jambon et a la tomates,
+        apres on a fait une petite sieste pour dig\xE9rer et \xE9viter l'hydrocution
+        pendant la baignade..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802113650576930558, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
+      propertyPath: m_Name
+      value: UI_DialogBaseLilianeMonolog
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3038d9df825ea234cbbdc2a3fa6250cd, type: 3}
