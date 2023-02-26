@@ -8,6 +8,7 @@ public class ExamQuizz : MainTask
     [SerializeField] private TextMeshProUGUI textBoxDialog = null;
 
     [SerializeField] private GameObject panelDialog = null;
+    [SerializeField] private int scoreOneQuestion = 250;
 
     [SerializeField] private int questionMax = 5;
     [SerializeField] private Dialog dialog;
@@ -37,7 +38,10 @@ public class ExamQuizz : MainTask
     // Update is called once per frame
     void Update()
     {
-        
+        if (dialog.GetSentence(indexSentence) == null)
+        {
+            WinExam();
+        }
     }
 
     public void ToNextSentence()
@@ -68,6 +72,7 @@ public class ExamQuizz : MainTask
     {
         questionCurrent++;
         Debug.Log("Quizz: " + questionCurrent);
+        LevelReferences.Instance.playerScoring.ScoreAdd(scoreOneQuestion);
     }
 
     public void WrongResponse()
@@ -80,17 +85,18 @@ public class ExamQuizz : MainTask
     {
         if (questionCurrent == questionMax)
         {
-            // Add max score
-        } 
+           LevelReferences.Instance.playerScoring.ScoreAdd(2500);
+        }
         else if (questionCurrent < questionMax / 2)
         {
-            // Add mid score
+            LevelReferences.Instance.playerScoring.ScoreAdd(450); // Add mid score 
         }
         else
         {
-            // Sub score (penality)
+            LevelReferences.Instance.playerScoring.ScoreRemove(600);// Sub score (penality)
         }
 
+        LevelReferences.Instance.taskManager.FinishTaskCurrent();
     }
     public string GetSentenceCurrent()
     {

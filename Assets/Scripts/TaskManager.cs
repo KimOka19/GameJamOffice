@@ -6,7 +6,7 @@ public class TaskManager : MonoBehaviour
 {
     private PlayerScoring globalScoring = null;
     private Timer timer = null;
-    private int localScore = 0;
+    [SerializeField] private int localScore = 250;
 
     [SerializeField] private float _duration = 120f;
 

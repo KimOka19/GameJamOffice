@@ -5,6 +5,7 @@ using UnityEngine;
 public class TaskPhone : MainTask
 {
     [SerializeField] private GameObject phone = null;
+    [SerializeField] private int scoreTask = 200;
 
     private ShakeScreen shakeScreen = null;
     private PlayerInteraction playerInteraction = null;
@@ -28,6 +29,7 @@ public class TaskPhone : MainTask
 
     private void Finish()
     {
+        LevelReferences.Instance.playerScoring.ScoreAdd(scoreTask);
         LevelReferences.Instance.taskManager.FinishTaskCurrent();
 
     }
