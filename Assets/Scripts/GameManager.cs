@@ -14,15 +14,18 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private Camera cameraTask = null;
 
     [SerializeField] private GameObject EndDayUI = null;
-    private void LaunchGame()
+
+    [SerializeField] private string nextScene = null;
+    public void LaunchGame()
     {
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene(nextScene);
     }
 
-    private void SwitchCurrentCamera(Camera cameraToSwitch)
+    public void SwitchCurrentCamera(Camera cameraToSwitch)
     {
         if(Camera.current != cameraToSwitch)
         {
+            cameraToSwitch.enabled = true;
             Camera.SetupCurrent(cameraToSwitch);
         }
     }
@@ -41,9 +44,16 @@ public class GameManager : Singleton<GameManager>
     public void ReturnToOffice()
     {
         SwitchCurrentCamera(cameraOffice);
+        cameraTask.enabled = false;
     }
 
-    private void QuitGame()
+    public void GoToDesk()
+    {
+        SwitchCurrentCamera(cameraTask);
+        cameraOffice.enabled = false;
+    }
+
+    public void QuitGame()
     {
         {
 #if UNITY_EDITOR

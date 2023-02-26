@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class TaskSmashButton : MainTask
 {
     [SerializeField] private PlayerSpaming player = null;
+    [SerializeField] private int scoreTask = 150;
 
     [SerializeField] private Slider jauge = null;
     private int maxJauge = 100;
@@ -48,7 +49,7 @@ public class TaskSmashButton : MainTask
 
         if (timer.Update())
         {
-           Finish();
+           FinishBad();
         }
 
 
@@ -96,7 +97,14 @@ public class TaskSmashButton : MainTask
     private void Finish()
     {
         Debug.Log("Finish prout");
+        LevelReferences.Instance.playerScoring.ScoreAdd(scoreTask);
+        player.enabled = false;
+        jauge.gameObject.SetActive(false);
+        LevelReferences.Instance.taskManager.FinishTaskCurrent();
+    }
 
+    private void FinishBad()
+    {
         player.enabled = false;
         jauge.gameObject.SetActive(false);
         LevelReferences.Instance.taskManager.FinishTaskCurrent();
