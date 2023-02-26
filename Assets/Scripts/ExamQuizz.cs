@@ -15,22 +15,26 @@ public class ExamQuizz : MainTask
     [SerializeField] private float typingSpeed = 0.1f;
     [SerializeField] private GameObject[] panelChoices = null;
 
-
+    [SerializeField] private Transform SpawnPoint = null;
+    [SerializeField] private GameObject character = null;
 
     private int questionCurrent = 0;
     private string currentSentence;
-    private int indexSentence;
-    private int indexChoices;
+    private int indexSentence = 0;
+    private int indexChoices = 0;
     
 
     private void Awake()
     {
         indexSentence = 0;
         textBoxDialog.text = "";
+        indexChoices = 0;
     }
 
     void Start()
     {
+        Instantiate<GameObject>(character, SpawnPoint);
+
         panelDialog.SetActive(true);
         ShowSentence();
     }

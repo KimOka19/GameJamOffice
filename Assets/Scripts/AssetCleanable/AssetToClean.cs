@@ -25,11 +25,23 @@ public class AssetToClean : MonoBehaviour
 
     public void MakeMess()
     {
+        SpawnVFX vFX = GetComponent<SpawnVFX>();
+
         currentObject.mesh = messObject;
+        if(GetComponent<SpawnVFX>() != null)
+        {
+            vFX.enabled = true;
+        }
     }
 
     public void Clean()
     {
+        SpawnVFX vFX = GetComponent<SpawnVFX>();
+
         currentObject.mesh = cleanObject;
+        if (GetComponent<SpawnVFX>() != null)
+        {
+            vFX.enabled = false;
+        }
     }
 }
