@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class MoveRandom : MonoBehaviour
 {
 
-    private float moveSpeed = 50f; // Vitesse de déplacement de l'image
+    private float moveSpeed = 150f; // Vitesse de déplacement de l'image
     private Vector3 targetPosition; // Position cible de l'image
 
     void Start()

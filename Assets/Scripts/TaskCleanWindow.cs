@@ -2,13 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TaskCleanWindow : MonoBehaviour
+public class TaskCleanWindow : MainTask
 {
     [SerializeField] private List<GameObject> WindowOpen = new List<GameObject>();
     private int totalWindows = 0;
     void Start()
     {
         totalWindows = WindowOpen.Count;
+
+        for (int i = 0; i < WindowOpen.Count; i++)
+        {
+            WindowOpen[i].SetActive(true);
+        }
     }
 
     // Update is called once per frame
@@ -16,7 +21,7 @@ public class TaskCleanWindow : MonoBehaviour
     {
         if(totalWindows == 0)
         {
-            
+            Finish();
         }
     }
 
@@ -28,6 +33,6 @@ public class TaskCleanWindow : MonoBehaviour
 
     public void Finish()
     {
-
+        LevelReferences.Instance.taskManager.FinishTaskCurrent();
     }
 }

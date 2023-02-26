@@ -5,33 +5,30 @@ using UnityEngine;
 public class AssetToClean : MonoBehaviour
 {
     [SerializeField]
-    private Transform cleanTransform = null;
+    private Transform cleanObjectTransform = null;
+    [SerializeField]
+    private Transform messObjectTransform = null;
 
     [SerializeField]
-    private Transform messTransform = null;
-
+    private Mesh cleanObject = null;
     [SerializeField]
-    private GameObject cleanMesh = null;
+    private Mesh messObject = null;
 
-    [SerializeField]
-    private GameObject messMesh = null;
+    private MeshFilter currentObject = null;
 
     // Start is called before the first frame update
     void Start()
     {
-        cleanMesh.transform.position = cleanTransform.position;
-        messMesh.transform.position = messTransform.position;
+        currentObject.mesh = cleanObject;
     }
 
     public void MakeMess()
     {
-        cleanMesh.SetActive(false);
-        messMesh.SetActive(true);
+        currentObject.mesh = messObject;
     }
 
     public void Clean()
     {
-        cleanMesh.SetActive(true);
-        messMesh.SetActive(false);
+        currentObject.mesh = cleanObject;
     }
 }

@@ -6,65 +6,61 @@ public class PlantScript : MonoBehaviour
 {
     [SerializeField]
     private Transform cleanPlantTransform = null;
-
     [SerializeField]
     private Transform messPlantTransform = null;
 
-    [SerializeField]
-    private GameObject cleanAndWateredMesh = null;
 
     [SerializeField]
-    private GameObject messAndWateredMesh = null;
-    
+    private Mesh cleanAndWateredObject = null;
     [SerializeField]
-    private GameObject cleanAndDryMesh = null;
+    private Mesh messAndWateredObject = null;
+    [SerializeField]
+    private Mesh cleanAndDryObject = null;
+    [SerializeField]
+    private Mesh messAndDryObject = null;
 
-    [SerializeField]
-    private GameObject messAndDryMesh = null;
+
+    private MeshFilter currentObject = null;
 
     public bool watered = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        //Set all mesh positions
-        cleanAndWateredMesh.transform.position = cleanPlantTransform.position;
-        messAndWateredMesh.transform.position = messPlantTransform.position; 
-        cleanAndDryMesh.transform.position = cleanPlantTransform.position;
-        messAndDryMesh.transform.position = messPlantTransform.position;
+        //Set mesh positions
+        gameObject.transform.position = cleanPlantTransform.position;
+        currentObject = gameObject.GetComponentInChildren<MeshFilter>();
+        currentObject.mesh = cleanAndWateredObject;
     }
 
-    private void ClearActivity()
+    void Update()
     {
-        cleanAndWateredMesh.SetActive(false);
-        cleanAndDryMesh.SetActive(false);
-        messAndWateredMesh.SetActive(false);
-        messAndDryMesh.SetActive(false);
+        if(Input.GetMouseButtonDown(1))
+        {
+            MakeMessPlant();
+        }
     }
-
     public void MakeMessPlant()
     {
-        ClearActivity();
         if (watered == true)
         {
-            messAndWateredMesh.SetActive(true);
+            currentObject.mesh = messAndWateredObject;
         }
         else
         {
-            messAndDryMesh.SetActive(true);
+            currentObject.mesh = messAndDryObject;
         }
     }
 
     public void CleanPlant()
     {
-        ClearActivity();
         if (watered == true)
         {
-            cleanAndWateredMesh.SetActive(true);
+            currentObject.mesh = cleanAndWateredObject;
         }
         else
         {
-            cleanAndDryMesh.SetActive(true);
+            currentObject.mesh = cleanAndDryObject;
         }
     }
 
