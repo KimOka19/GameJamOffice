@@ -14,13 +14,12 @@ public class AssetToClean : MonoBehaviour
     [SerializeField]
     private Mesh messObject = null;
 
-    [SerializeField]
     private MeshFilter currentObject = null;
 
     // Start is called before the first frame update
     void Start()
     {
-        currentObject.mesh = messObject;
+        currentObject.mesh = cleanObject;
     }
 
     public void MakeMess()
