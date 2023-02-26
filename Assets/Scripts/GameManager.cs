@@ -16,6 +16,8 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private GameObject EndDayUI = null;
 
     [SerializeField] private string nextScene = null;
+
+    [SerializeField] private AudioSource audioSource = null;
     public void LaunchGame()
     {
         SceneManager.LoadScene(nextScene);

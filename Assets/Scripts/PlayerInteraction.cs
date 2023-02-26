@@ -31,6 +31,12 @@ public class PlayerInteraction : MonoBehaviour
                     currentItem = hitInfo.collider.gameObject;
                     Debug.Log(hitInfo.collider.gameObject.name);
                 }
+                else if (hitInfo.collider.gameObject.GetComponent<AssetToClean>())
+                {
+                    currentItem = hitInfo.collider.gameObject;
+                    Debug.Log(hitInfo.collider.gameObject.name);
+                }
+
             }
         }
     }
@@ -39,6 +45,8 @@ public class PlayerInteraction : MonoBehaviour
     {
         return currentItem;
     }
+
+
 
     
 }

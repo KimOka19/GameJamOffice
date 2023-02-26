@@ -24,6 +24,8 @@ public class PlantScript : MonoBehaviour
 
     public bool watered = false;
 
+    private bool isClean = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,20 +37,23 @@ public class PlantScript : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetMouseButtonDown(1))
-        {
-            MakeMessPlant();
-        }
+        //if(Input.GetMouseButtonDown(1))
+        //{
+        //    MakeMessPlant();
+        //}
     }
+
     public void MakeMessPlant()
     {
         if (watered == true)
         {
             currentObject.mesh = messAndWateredObject;
+            isClean = false;
         }
         else
         {
             currentObject.mesh = messAndDryObject;
+            isClean = false;
         }
     }
 
@@ -57,10 +62,12 @@ public class PlantScript : MonoBehaviour
         if (watered == true)
         {
             currentObject.mesh = cleanAndWateredObject;
+            isClean = true;
         }
         else
         {
             currentObject.mesh = cleanAndDryObject;
+            isClean = true;
         }
     }
 
@@ -71,5 +78,10 @@ public class PlantScript : MonoBehaviour
     public void SetWateredPlant()
     {
         watered = true;
+    }
+
+    public bool PlantisClean()
+    {
+        return isClean;
     }
 }

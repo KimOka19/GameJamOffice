@@ -18,6 +18,8 @@ public class MugScript : MonoBehaviour
 
     private MeshFilter currentObject = null;
 
+    private bool isClean = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,5 +34,6 @@ public class MugScript : MonoBehaviour
     public void Clean()
     {
         currentObject.mesh = cleanObject;
+        isClean = true;
     }
 }
